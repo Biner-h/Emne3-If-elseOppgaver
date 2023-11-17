@@ -2,9 +2,27 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void getRanNum()
         {
-            Console.WriteLine("Hello, World!");
+            Random random = new Random();
+            int number1 = random.Next(1, 5 + 1);
+            int number2 = random.Next(1, 6);
+            bool isEqual = false;
+
+            if (number1 == number2)
+            {
+                isEqual = true;
+                Console.WriteLine("Det er riktig");
+            }
+            else
+            {
+                isEqual = false;
+                Console.WriteLine("Tallene er ikke like!");
+            }           
+        }
+        static void Main()
+        {
+            getRanNum();
         }
     }
 }
